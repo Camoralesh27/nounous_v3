@@ -3,8 +3,8 @@
 
 
 .btn {
-    @include m.boton(v.$blanco, v.$negro);
+    @include m.boton(v.$white, v.$black);
 }
 .boton-negro {
-    @include m.boton(v.$negro, v.$blanco);
+    @include m.boton(v.$black, v.$white);
 }
