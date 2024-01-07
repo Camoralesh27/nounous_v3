@@ -1,6 +1,11 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
+.header {
+    width: 100vw;
+    height: 7.5rem;
+}
+
 .bannerM {
     display: flex;
     width: 100vw;
@@ -11,8 +16,9 @@
     align-items: center;
     background-color: v.$pink4;
     border-bottom: 2px solid v.$black;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 100;
 
     &__logo {
         width: 7rem;
