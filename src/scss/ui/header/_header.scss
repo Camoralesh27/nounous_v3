@@ -5,10 +5,10 @@
     display: flex;
     width: 100vw;
     height: 7.5rem;
+    padding: 0 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
     background-color: v.$pink4;
     border-bottom: 2px solid v.$black;
     position: sticky;
