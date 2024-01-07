@@ -9,11 +9,13 @@
 
     &__heading {
         font-weight: 600;
+        text-align: center;
     } 
     
     &__text {
         font-size: 1.3rem;
         line-height: 1.5;
+        text-align: center;
     }
 
     &__highlight {
@@ -22,7 +24,7 @@
     }
 
     &__boximg {
-        margin: 2rem 0 4rem 0;
+        margin: 2rem auto 4rem auto;
         position: relative;
         max-height: 32rem;
     }
