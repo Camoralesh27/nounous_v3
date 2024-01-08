@@ -19,6 +19,12 @@ body {
     font-size: 1.6rem;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, span {
+    &::selection {
+        background-color: v.$blue2;
+    }
+}
+
 [class$="contenedor"],
 .contenedor {
     width: 95%;

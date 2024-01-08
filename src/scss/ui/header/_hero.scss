@@ -2,6 +2,7 @@
 @use 'base/variables' as v;
 
 .hero {
+    margin-top: 7rem;
     padding: .5rem 2rem;
     background: linear-gradient(166deg, #FFF3F2 40%, #FFC1C0 100%);
     display: flex;
@@ -14,13 +15,8 @@
     
     &__text {
         font-size: 1.5rem;
-        line-height: 1.5;
+        line-height: 1.7;
         text-align: center;
-    }
-
-    &__highlight {
-        color: v.$yellow4;
-        font-weight: 600;
     }
 
     &__boximg {

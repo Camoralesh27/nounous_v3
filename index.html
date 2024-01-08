@@ -24,13 +24,39 @@
 <body>
     
     <header class="header">
-        <div class="bannerM">
-            <img class="bannerM__logo" src="./src/img/logo_letBlancas.png" alt="logo">
+        <div class="navM">
+            <div class="navM__data">
+                <a clas="navM__logoLink" href="./index.html">
+                    <img class="navM__logo" src="./src/img/logo_letBlancas.png" alt="logo">
+                </a>
+    
+                <div class="navM__toggle" id="navM-toggle">
+                    <i class="fa-solid fa-bars navM__burger"></i>
+                    <i class="fa-solid fa-x navM__close"></i>
+                </div>
+            </div>
 
-            <i class="bannerM__ico fa-solid fa-bars"></i>
+            <!-- ======= NAV MENU ======= -->
+            <div class="navM__menu" id="navM-menu">
+                <ul class="navM__list">
+                    <li class="navM__item">
+                        <a href="./index.html" class="navM__link">Inicio</a>
+                    </li>
+
+                    <li class="navM__item">
+                        <a href="#" class="navM__link"> Servicios</a>
+                    </li>
+
+                    <li class="navM__item">
+                        <a href="#" class="navM__link">Contacto</a>
+                    </li>
+
+                    <li class="navM__item">
+                        <a href="#" class="navM__link">Quiero ser Niñera</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-
         <!-- <div class="bannerD">
             <div class="banner__contacto">
                 <div class="banner__widget">
@@ -71,7 +97,7 @@
     <main class="hero">
             <h1 class="hero__heading">Encuentra <span class="hero__highlight">niñeras confiables</span> en Chihuahua</h1>
 
-            <p class="hero__text">Conectamos a familias con <span class="hero__highlight">niñeras, maestras y psicólogas profesionales </span> con experiencia en el cuidado infantil en quien puedas tener la tranquilidad y confianza. </p>
+            <p class="hero__text">Conectamos a familias con <span class="hero__highlight">niñeras, enfermeras, maestras y psicólogas profesionales </span> con experiencia en el cuidado infantil en quien puedas tener la tranquilidad y confianza. </p>
 
             <div class="hero__boximg">
                 <div class="hero__imgMarco"></div>
@@ -82,5 +108,7 @@
 
             <a class="hero__btn btn" href="http://wa.me/526141008057""><i class="hero__btnIcono fa-brands fa-whatsapp"></i>¡Agendar una Nanny!</a>
     </main>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>

@@ -2,32 +2,121 @@
 @use 'base/variables' as v;
 
 .header {
-    width: 100vw;
-    height: 7.5rem;
-}
-
-.bannerM {
-    display: flex;
-    width: 100vw;
-    height: 7.5rem;
-    padding: 0 1rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: v.$pink4;
-    border-bottom: 2px solid v.$black;
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lighten(v.$pink4, 3%);
+    height: 7rem;
     z-index: 100;
+}
+
+.navM {
+    height: 7rem;
+    
+    &__data {
+        height: 100%;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid v.$black;
+    }
 
     &__logo {
         width: 7rem;
     }
 
-    &__ico {
+    &__toggle {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        /* background-color: darken(v.$yellow4, 1%);
+        border-radius: .5rem;
+        box-shadow:  2px 2px 7px 0px rgba(0, 0, 0, 0.50); */
+    }
+
+    &__burger, 
+    &__close {
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        margin: auto;
+        inset: 0;
         font-size: 2.5rem;
+        cursor: pointer;
+        transition: opacity .1s, transform .4s;
+    }
+
+    &__burger {
+        
+    }
+
+    &__close {
+        opacity: 0;
+    }
+
+    &__menu {
+        position: absolute;
+        left: 0;
+        top: 7rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top .4s, opacity .3s;
+    }
+
+    &__menu::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &__list {
+        background-color: lighten(v.$blue4trans, 10%);
+        padding: 2rem 0;
+        box-shadow: 2px 0 7px 0px rgba(0, 0, 0, 0.50);
+        border-bottom: 2px solid v.$black;
+    }
+
+    &__link {
+        color: v.$black;
+        font-weight: 600;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .3s;
+    }
+
+
+    &__link:hover {
+        background-color: lighten(v.$blue4, 10%);
     }
 }
+
+.show-menu {
+    opacity: 1;
+    top: 7rem;
+    pointer-events: initial;
+}
+
+.show-icon .navM__burger {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .navM__close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
 
 
 .bannerD {
