@@ -5,15 +5,20 @@
     background-color: v.$yellow1;
     padding: 2.5rem 2rem 2.5rem 2rem;
 
+    &__heading,
+    &__texto {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
     &__heading {
-        width: 75%;
         margin: 0 auto;
         text-align: center;
         border-bottom: 5px solid v.$yellow4;
     }
 
     &__texto {
-        padding: 2rem 4.2rem;
+        padding: 2rem 0rem;
         text-align: center;
     }
 
@@ -34,50 +39,37 @@
     padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
     row-gap: 2rem;
+    max-width: 37rem;
 
-    &__iconos {
+    &__iconos,
+    &__texto,
+    &__cliente {
         width: 100%;
     }
 
     &__texto {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     &__cliente {
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-
         gap: 1rem;
     }
 
-    &__imagen {
-        width: 25%;
-        margin: 0 auto;
-    }
-
     &__img {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4.2rem;
+        height: 4.2rem;
         object-fit: cover;
         border-radius: 50%;
     }
 
-    &__datos {
-
-    }
-
-    &__nombre {
-
-    }
-
     &__posicion {
-        font-size: 1.1rem;
-        max-width: calc(100% - 5.5rem);
+        font-size: 1.2rem;
     }
 }

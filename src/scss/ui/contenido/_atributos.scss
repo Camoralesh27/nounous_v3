@@ -5,15 +5,20 @@
     padding: 2.5rem 2rem 2.5rem 2rem;
     background-color: v.$blue1;
 
+    &__heading,
+    &__texto {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
     &__heading {
-        width: 75%;
         margin: 0 auto;
         text-align: center;
         border-bottom: 5px solid v.$yellow4;
     }
 
     &__texto {
-        padding: 2rem 4.2rem;
+        padding: 2rem 0;
         text-align: center;
     }
 
@@ -38,6 +43,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    max-width: 37rem;
 
     &__icon {
         font-size: 3.7rem;
