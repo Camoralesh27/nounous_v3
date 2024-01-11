@@ -1,2 +1,113 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
+
+.faq {
+    background-color: v.$pink1;
+    padding: 2rem 2rem;
+
+    &__heading,
+    &__texto {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 5px solid v.$yellow4;
+    }   
+
+    &__texto {
+        padding: 2rem 0rem;
+        text-align: center;
+    }
+
+    &__widgets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 2rem;
+    }
+
+    &__pregunta {
+        text-align: center;
+        padding-top: 2rem;
+    }
+}
+
+.widget3 {
+    background-color: v.$pink3;
+    border: 2px solid v.$black;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-width: 37rem;
+
+    &__question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__heading {
+        font-size: 1.7rem;
+        margin: .5rem 0;
+    }
+
+    &__toggle {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &__open,
+    &__close {
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        margin: auto;
+        inset: 0;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: opacity .1s, transform .4s;
+    }
+
+    &__close {
+        opacity: 0;
+    }
+
+    &__answer {
+        width: 100%;
+        opacity: 0;
+        height: 0;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        padding: .5rem 0;
+        color: lighten(v.$black, 10%);
+    }
+}
+
+.show-faq {
+    opacity: 1;
+    pointer-events: initial;
+    height: auto;
+    transition: all .3s;
+}
+
+.show-icon2 .widget3__open {
+    opacity: 0;
+    /* transform: rotate(360deg); */
+}
+
+.show-icon2 .widget3__close {
+    opacity: 1;
+    /* transform: rotate(360deg); */
+}
