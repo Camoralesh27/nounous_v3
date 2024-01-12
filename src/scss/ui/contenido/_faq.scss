@@ -36,78 +36,58 @@
     }
 }
 
-.widget3 {
-    background-color: v.$pink3;
-    border: 2px solid v.$black;
-    border-radius: 1rem;
-    box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
-    padding: 2rem 2rem;
+.accordion {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    max-width: 37rem;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 2rem;
+    
+
+    &__content {
+        background-color: v.$pink3;
+        border: 2px solid v.$black;
+        border-radius: 1rem;
+        box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
+        padding: 2rem 2rem;
+
+        max-width: 37rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* & .open {
+        padding-bottom: 1rem ;
+    } */
 
     &__question {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-    }
-
-    &__heading {
-        font-size: 1.7rem;
-        margin: .5rem 0;
-    }
-
-    &__toggle {
-        position: relative;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    &__open,
-    &__close {
-        position: absolute;
-        width: max-content;
-        height: max-content;
-        margin: auto;
-        inset: 0;
-        font-size: 2.5rem;
         cursor: pointer;
-        transition: opacity .1s, transform .4s;
+        /* min-height: 5rem; */
+        /* padding: 0 1.5rem; */
+        transition: all .2s linear;
     }
 
-    &__close {
-        opacity: 0;
+    &__title {
+        font-size: 1.7rem;
     }
 
-    &__answer {
-        width: 100%;
-        opacity: 0;
+    &__icon {
+        font-size: 2rem;
+    }
+
+    &__description {
+        /* display: none; */
         height: 0;
-    }
-
-    &__text {
-        font-size: 1.5rem;
-        padding: .5rem 0;
+        font-size: 1.4rem;
+        padding: 0 1.5rem;
         color: lighten(v.$black, 10%);
+        transition: all .2s linear;
+        line-height: 1.4;
+        /* opacity: 0; */
     }
-}
 
-.show-faq {
-    opacity: 1;
-    pointer-events: initial;
-    height: auto;
-    transition: all .3s;
-}
 
-.show-icon2 .widget3__open {
-    opacity: 0;
-    /* transform: rotate(360deg); */
-}
-
-.show-icon2 .widget3__close {
-    opacity: 1;
-    /* transform: rotate(360deg); */
 }
