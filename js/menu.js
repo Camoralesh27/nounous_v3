@@ -14,22 +14,7 @@ const showMenu = (toggleId, navId) =>{
  showMenu('navM-toggle','navM-menu');
 
 
- /*=============== FAQ ===============*/
-/* const showFAQ = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId)
- 
-    toggle.addEventListener('click', () =>{
-        // Add show-menu class to nav menu
-        nav.classList.toggle('show-faq')
-        // Add show-icon to show and hide menu icon
-        toggle.classList.toggle('show-icon2')
-    })
- }
- 
- showFAQ('widget3-toggle','widget3-answer'); */
-
- /* FAQ 2 */
+ /* FAQ */
  const accordionContent = document.querySelectorAll(".accordion__content")
 
  accordionContent.forEach((item, index) => {
@@ -40,9 +25,11 @@ const showMenu = (toggleId, navId) =>{
     let description = item.querySelector(".accordion__description");
     if(item.classList.contains("open")){
         description.style.height = `${description.scrollHeight}px`;
+        description.style.opacity = "1"; /* ! */
         item.querySelector("i").classList.replace("fa-plus","fa-minus");
     }else {
         description.style.height = "0px";
+        description.style.opacity = "0";
         item.querySelector("i").classList.replace("fa-minus","fa-plus");
     }
     removeOpen(index);
@@ -58,6 +45,7 @@ function removeOpen(index1){
 
             let des = item2.querySelector(".accordion__description");
             des.style.height ="0px"
+            des.style.opacity = "0";
             item2.querySelector("i").classList.replace("fa-minus","fa-plus");
         }
     })
