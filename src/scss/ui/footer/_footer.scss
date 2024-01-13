@@ -1,2 +1,63 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lighten(v.$pink4, 3%);
+    border-top: 2px solid v.$black;
+    row-gap: 1rem;
+    padding: 1.5rem 0;
+
+    &__logo {
+        width: 10rem;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 2rem;
+        
+    }
+
+    &__socialLink {
+        color: v.$black;
+        font-size: 2.5rem;
+
+    }
+
+    &__socialIcon {
+
+    }
+
+    &__links {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    &__link {
+        color: v.$black;
+        text-decoration: underline;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    &__line {
+        width: 85%;
+        border: 1px solid v.$black;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: .5rem 2rem;
+    }
+
+}
