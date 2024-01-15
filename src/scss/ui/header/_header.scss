@@ -9,11 +9,20 @@
     background-color: lighten(v.$pink4, 3%);
     height: 7rem;
     z-index: 100;
+
+    @include m.desktop {
+        height: 3rem;
+    }
 }
 
+/* ======= MOBILE ======= */
 .navM {
     height: 7rem;
     
+    @include m.desktop {
+        display: none;
+    }
+
     &__data {
         height: 100%;
         padding: 0 2rem;
@@ -118,46 +127,45 @@
     transform: rotate(90deg);
 }
 
-
-
-
-
-
-
-
-
+/* ======= DESKTOP ======= */
 .bannerD {
-
-
-
-    /* display: flex;
-    align-items: center;
-    background-color: v.$pink4;
+    
+    background-color: lighten(v.$pink4, 3%);
     color: v.$black;
-    justify-content: space-evenly;
-    max-width: 100vw;
+    display: none;
+    height: 4rem;
+    border-bottom: 2px solid v.$black;
+    
+    @include m.desktop {
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: v.$maxwidth;
+        margin: auto;
+    }
 
 
     &__contacto {
         display: flex;
         align-items: center;
+        column-gap: .5rem;
     }
 
-    &__widget {
-        display: flex;
-        align-items: center;
-    }
-
-    &__icono {
+    &__contacto-icono {
 
     }
 
-    &__widget-text {
-
+    &__contacto-link {
+        color: v.$black;
     }
 
     &__horario {
-
     }
 
     &__texto {
@@ -167,5 +175,10 @@
     &__siguenos {
         display: flex;
         align-items: center;
-    } */
+        gap: .7rem;
+    }
+
+    &__siguenos-texto {
+        font-weight: 600;
+    }
 }

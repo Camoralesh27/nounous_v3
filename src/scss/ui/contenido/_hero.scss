@@ -5,16 +5,36 @@
     margin-top: 7rem;
     padding: 2rem 2rem 3rem 2rem;
     background: linear-gradient(166deg, #FFF3F2 40%, #FFC1C0 100%);
-    display: flex;
-    flex-direction: column;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
 
-    @include m.tablet {
-        
+        max-width: v.$maxwidth;
+        margin: 0 auto;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: .5rem;
+
+        @include m.tablet {
+            row-gap: 1rem;
+        }
     }
 
     &__heading {
         font-weight: 600;
         text-align: center;
+        margin: 0;
     } 
     
     &__text {
@@ -27,22 +47,48 @@
         margin: 2rem auto 4rem auto;
         position: relative;
         max-height: 32rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__boximg1 {
+        
+        @include m.tablet {
+            display: none;
+        }
+    }
+
+    &__boximg2 {
+        display: none;
+
+        @include m.tablet {
+            display: block;
+            grid-column: 2 /3;
+        }
+    }
+
+    &__imgMarco,
+    &__img {
+        width: 25rem;
+        height: 25rem;
+
+        @include m.tablet {
+            width: 30rem;
+            height: 30rem;
+        }
     }
 
     &__imgMarco {
-        width: 25rem;
-        height: 25rem;
         border: 10px solid v.$yellow4;
         border-radius: 2rem;
         margin: 0 2rem;
     }
 
     &__img {
-        width: 25rem;
-        height: 25rem;
         position: absolute;
         top: 1.5rem;
-        left: 0;
+        left: 50%; /* esto lo lleva a la mitad */
+        transform: translateX(-58%); /* esto posiciona a la mitad, de la mitad anterior */
         object-fit: cover;
         border-radius: 2rem;
         box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
