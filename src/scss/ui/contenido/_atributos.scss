@@ -7,7 +7,6 @@
 
     &__heading,
     &__texto {
-        max-width: 50rem;
         margin: 0 auto;
     }
 
@@ -15,11 +14,13 @@
         margin: 0 auto;
         text-align: center;
         border-bottom: 5px solid v.$yellow4;
+        max-width: max-content;
     }
 
     &__texto {
         padding: 2rem 0;
         text-align: center;
+        max-width: v.$maxwidth;
     }
 
     &__widgets {
@@ -28,6 +29,15 @@
         align-items: center;
         justify-content: space-around;
         row-gap: 2rem;
+        max-width: v.$maxwidth;
+        margin: 0 auto;
+        
+
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
     }
 }
 
@@ -41,9 +51,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     max-width: 37rem;
+    margin: 0 auto;
+
+    @include m.tablet {
+        height: 25rem;
+        max-width: 37rem;
+    }
+    
 
     &__icon {
         font-size: 3.7rem;
