@@ -1,0 +1,68 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contacto {
+    padding: 3rem 2rem;
+
+    &__btn {
+
+        @include m.tablet {
+            display: none;
+        }
+    }
+
+    &__widgets {
+       grid-template-columns: unset;
+       grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__imgMarco {
+        border: 10px solid v.$blue4;
+    }
+}
+
+.widget-contact {
+    border: 2px solid v.$black;
+    border-radius: 1rem;
+    background-color: v.$blue4;
+    box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.7rem;
+    width: 100%;
+    max-width: 37rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: .7rem;
+    }
+
+    &__icon {
+        font-size: 2.5rem;
+    }
+
+    &__heading {
+        font-size: 1.7rem;
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 1.4rem;    
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 1.5rem; 
+    }
+
+    &__socialLink {
+        color: v.$black;
+        font-size: 2.5rem;
+    }
+}
+

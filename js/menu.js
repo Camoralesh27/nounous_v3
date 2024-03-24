@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+/*======= SHOW MENU =======*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
           nav = document.getElementById(navId)
@@ -14,7 +14,7 @@ const showMenu = (toggleId, navId) =>{
  showMenu('navM-toggle','navM-menu');
 
 
- /* FAQ */
+ /* ======= FAQ ======= */
  const accordionContent = document.querySelectorAll(".accordion__content")
 
  accordionContent.forEach((item, index) => {
@@ -50,3 +50,5 @@ function removeOpen(index1){
         }
     })
 }
+
+/* ======= Remove BannerD ======= */

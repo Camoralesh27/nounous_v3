@@ -28,9 +28,48 @@
 
 
 <body>
+
+    <!-- ======= banner Desktop ======= -->
+    <div class="bannerD">
+        <div class="bannerD__container">
+            <div class="bannerD__contacto">
+                <div class="bannerD__contacto-icono">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+    
+                <p class="bannerD__contacto-texto">
+                    (614)-100-8057
+                </p>
+                
+            </div><!-- .contacto -->
+
+
+            <div class="bannerD__horario">
+                <p class="banneD__texto">Lunes a Domingo de 7:00am a 22:00pm</p>
+            </div>
+
+
+            <div class="bannerD__siguenos">
+                <p class="bannerD__siguenos-texto">Siguenos:</p>
+
+                <div class="bannerD__siguenos-social">
+                    <a href="https://web.facebook.com/nousni" target="_blank" class="footer__socialLink">
+                        <i class="footer__socialIcon bi bi-facebook"></i>
+                    </a>
+    
+                    <a href="https://www.instagram.com/nounousnineras" target="_blank" class="footer__socialLink">
+                        <i class="footer__socialIcon bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <!-- ======= NAV ======= -->
     <header class="header">
 
+    
         <!-- ======= nav Mobile ======= -->
         <div class="navM">
             <div class="navM__data">
@@ -39,13 +78,13 @@
                 </a>
     
                 <div class="navM__toggle" id="navM-toggle">
-                    <i class="fa-solid fa-bars navM__burger"></i>
-                    <i class="fa-solid fa-x navM__close"></i>
+                    <i class="bi bi-list navM__burger"></i>
+                    <i class="bi bi-x navM__close"></i>
                 </div>
             </div>
 
             <!-- ======= NAV MENU ======= -->
-            <div class="navM__menu" id="navM-menu">
+            <nav class="navM__menu" id="navM-menu">
                 <ul class="navM__list">
                     <li class="navM__item">
                         <a href="./index.html" class="navM__link">Inicio</a>
@@ -56,7 +95,7 @@
                     </li>
 
                     <li class="navM__item">
-                        <a href="#" class="navM__link">Contacto</a>
+                        <a href="./contacto.html" class="navM__link">Contacto</a>
                     </li>
 
                     <li class="navM__item">
@@ -73,41 +112,40 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
-
-        <!-- ======= banner Desktop ======= -->
-        <div class="bannerD">
-            <div class="bannerD__container">
-                <div class="bannerD__contacto">
-                    <div class="bannerD__contacto-icono">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <a href="6141008057" class="bannerD__contacto-link">
-                        <p class="bannerD__contacto-texto">
-                            (614)-100-8057
-                        </p>
-                    </a>
-                </div><!-- .contacto -->
-
-
-                <div class="bannerD__horario">
-                    <p class="banneD__texto">Lunes a Domingo de 7:00am a 22:00pm</p>
-                </div>
-
-
-                <div class="bannerD__siguenos">
-                    <p class="bannerD__siguenos-texto">Siguenos:</p>
-
-                    <i class="fa-brands fa-facebook"></i>
-
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-            </div>
+            </nav>
         </div>
 
         <!-- ======= nav Desktop ======= -->
         <div class="navD">
+            <img src="./src/img/logo_ico.ico" alt="logo" class="navD__logo">
+
+            <div class="navD__container">
+                <nav class="navD__menu">
+                    <ul class="navD__list">
+                        <li class="navD__item">
+                            <a href="./index.html" class="navD__link">Inicio</a>
+                        </li>
+
+                        <p class="navD__stick navD__item"></p>
+    
+                        <li class="navD__item">
+                            <a href="#" class="navD__link"> Servicios</a>
+                        </li>
+
+                        <p class="navD__stick navD__item"></p>
+    
+                        <li class="navD__item">
+                            <a href="./contacto.html" class="navD__link">Contacto</a>
+                        </li>
+
+                        <p class="navD__stick navD__item"></p>
+    
+                        <li class="navD__item">
+                            <a href="#" class="navD__link">Quiero ser Niñera</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
     </header>
@@ -359,7 +397,7 @@
             <div class="footer__links">
                 <a href="#" class="footer__link">Politicas de privacidad</a>
                 <a href="#" class="footer__link">Terminos del Servicio</a>
-                <a href="#" class="footer__link">Cookies</a>
+                <!-- <a href="#" class="footer__link">Cookies</a> -->
             </div>
         </div>
 
