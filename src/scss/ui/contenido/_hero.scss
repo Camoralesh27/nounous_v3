@@ -105,7 +105,24 @@
         @include m.tablet {
             max-width: 30rem;
         }
+
+        &--mobile {
+        
+            @include m.tablet {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include m.tablet {
+                display: block;
+            }
+        }
     }
+
+    
 
     &__btnIcono {
         font-size: 2rem;

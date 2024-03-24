@@ -19,6 +19,10 @@
     &__imgMarco {
         border: 10px solid v.$blue4;
     }
+
+    &__container {
+        padding-top: 1rem;
+    }
 }
 
 .widget-contact {
@@ -51,6 +55,8 @@
 
     &__text {
         font-size: 1.4rem;    
+        color: v.$black;
+        padding-left: .5rem;
     }
 
     &__social {
@@ -58,6 +64,7 @@
         flex-direction: row;
         justify-content: flex-start;
         column-gap: 1.5rem; 
+        padding-left: .5rem;
     }
 
     &__socialLink {
