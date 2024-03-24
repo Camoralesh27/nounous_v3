@@ -26,11 +26,11 @@ const showMenu = (toggleId, navId) =>{
     if(item.classList.contains("open")){
         description.style.height = `${description.scrollHeight}px`;
         description.style.opacity = "1"; /* ! */
-        item.querySelector("i").classList.replace("fa-plus","fa-minus");
+        item.querySelector("i").classList.replace("bi-plus-lg","bi-dash-lg");
     }else {
         description.style.height = "0px";
         description.style.opacity = "0";
-        item.querySelector("i").classList.replace("fa-minus","fa-plus");
+        item.querySelector("i").classList.replace("bi-dash-lg","bi-plus-lg");
     }
     removeOpen(index);
 
@@ -46,7 +46,7 @@ function removeOpen(index1){
             let des = item2.querySelector(".accordion__description");
             des.style.height ="0px"
             des.style.opacity = "0";
-            item2.querySelector("i").classList.replace("fa-minus","fa-plus");
+            item2.querySelector("i").classList.replace("bi-dash-lg","bi-plus-lg");
         }
     })
 }
