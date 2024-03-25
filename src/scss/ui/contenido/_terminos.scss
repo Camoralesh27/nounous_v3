@@ -1,0 +1,45 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.terminos {
+
+    &__heading {
+        padding-top: 2.5rem;
+
+        &--peques {
+            font-size: 3rem;
+        }
+    }
+
+    &__texto,
+    &__texto--list {
+        max-width: v.$maxwidth;
+        margin: 0 auto;
+    }
+
+    &__texto--list {
+        padding-bottom: 1rem;
+        max-width: 70rem;
+    }
+
+    &__texto--list2 {
+        color: green;
+        max-width: 65rem;
+        
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+
+    &__list {
+        padding: 2rem 0;
+    }
+
+    &__list2 {
+
+    }
+
+    &__texto {
+        padding-top: 1rem;
+    }
+
+}
