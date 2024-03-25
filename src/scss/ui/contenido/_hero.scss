@@ -13,6 +13,7 @@
 
         max-width: v.$maxwidth;
         margin: 0 auto;
+
         @include m.tablet {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -100,7 +101,7 @@
         align-items: center;
         justify-content: center;
         gap: .5rem;
-        width: 100%;
+        width: 90%;
 
         @include m.tablet {
             max-width: 30rem;

@@ -1,3 +1,124 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
+.procedimiento {
+    background-color: v.$pink1;
+    max-width: v.$maxwidth;
+    margin: 0 auto;
+
+    &__heading {
+        border-bottom: 5px solid v.$blue4;
+        font-size: 4.5rem;
+    }
+
+    &__widgets {
+        padding: 2rem 0;
+    }
+
+    &__widget {
+        background-color: v.$blue4;
+        row-gap: 1rem;
+    }
+}
+
+.servicios {
+    max-width: v.$maxwidth;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.servicio {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem auto;
+
+    @include m.tablet {
+        flex-direction: row;
+    }
+
+    &:nth-child(1) {
+        background-color: v.$blue2;
+    }
+
+    &:nth-child(1) .servicio__descripcion {
+        background-color: v.$blue4;
+    }
+
+    &:nth-child(2) {
+        background-color: v.$yellow2;
+    }
+
+    &:nth-child(2) .servicio__descripcion {
+        background-color: v.$yellow4;
+    }
+
+    &:nth-child(3) {
+        background-color: v.$pink2;
+    }
+
+    &:nth-child(3) .servicio__descripcion {
+        background-color: v.$pink4;
+    }
+
+    &:nth-child(4) {
+        background-color: v.$blue2;
+    }
+
+    &:nth-child(4) .servicio__descripcion {
+        background-color: v.$blue4;
+    }
+
+    &:nth-child(odd) {
+
+        @include m.tablet {
+            flex-direction: row-reverse;   
+        }
+    }
+
+
+
+    &__imgContainer {
+        
+    }
+
+    &__img {
+        width: 25rem;
+        height: 25rem;
+        object-fit: cover;
+        border-radius: 2rem;
+        box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
+    }
+
+    &__descripcion {
+        border: 2px solid v.$black;
+        border-radius: 1rem;
+        background-color: v.$yellow4;
+        box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.50);
+        padding: 2rem 2rem;
+        display: flex;
+         flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        max-width: 37rem;
+        /* margin: 0 auto; */
+        /* row-gap: 1rem; */
+    }
+
+    &__heading {
+
+    }
+
+    &__texto {
+
+    }
+}
+

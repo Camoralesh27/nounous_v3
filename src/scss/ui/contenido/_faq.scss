@@ -96,5 +96,12 @@
         transition: all .2s linear;
         line-height: 1.4;
         opacity: 0;
+    
+        &--link {
+            color: v.$black;
+            text-decoration: underline v.$black;
+            font-weight: 600;
+            font-style: italic;
+        }
     }
 }
