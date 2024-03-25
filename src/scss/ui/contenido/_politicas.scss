@@ -1,0 +1,11 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.politicas {
+    
+    &__texto {
+        padding: 2rem 2rem;
+        max-width: v.$maxwidth;
+        margin: 0 auto;
+    }
+}

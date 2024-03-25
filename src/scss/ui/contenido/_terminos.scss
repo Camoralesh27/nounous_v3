@@ -2,6 +2,9 @@
 @use 'base/variables' as v;
 
 .terminos {
+    max-width: v.$maxwidth;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 
     &__heading {
         padding-top: 2.5rem;
@@ -32,6 +35,13 @@
 
     &__list {
         padding: 2rem 0;
+        max-width: 30rem;
+        margin: 0 auto;
+
+        @include m.tablet {
+            max-width: v.$maxwidth;
+
+        }
     }
 
     &__list2 {

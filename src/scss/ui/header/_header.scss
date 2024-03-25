@@ -198,7 +198,7 @@
     display: none; 
     max-width: v.$maxwidth;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: .5rem 0;
 
     @include m.desktop {
         display: flex;
