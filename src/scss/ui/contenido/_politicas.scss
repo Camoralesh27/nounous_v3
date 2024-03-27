@@ -2,6 +2,17 @@
 @use 'base/variables' as v;
 
 .politicas {
+    max-width: v.$maxwidth;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    &__heading {
+        padding-top: 2.5rem;
+    }
+
+    &__heading-h3:first-of-type {
+        padding-top: 2rem;
+    }
     
     &__texto {
         padding: 2rem 2rem;
