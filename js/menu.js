@@ -51,4 +51,5 @@ function removeOpen(index1){
     })
 }
 
-/* ======= Remove BannerD ======= */
+/*======= Actualizar año footer =======*/
+document.getElementById("year").textContent = new Date().getFullYear();
