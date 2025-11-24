@@ -1,28 +1,30 @@
 {
-  "name": "cafeteria",
+  "name": "nousni",
   "version": "1.0.0",
-  "description": "Delivery App, BEM, SASS, Gulp, CSS Grid",
-  "main": "index.js",
+  "description": "Website Nousni, servicios de niñeras, maestras y psicologas",
+  "type": "module",
+  "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp"
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp",
+    "build": "gulp --tasks=default"
   },
-  "author": "Juan De la torre @codigoconjuan",
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "NPM"
+  ],
+  "author": "StudioIchi",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "cssnano": "^5.0.7",
-    "gulp": "^4.0.2",
-    "gulp-avif": "^1.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-webp": "^4.0.1",
-    "postcss": "^8.3.6",
-    "sass": "^1.37.5"
+    "glob": "^10.4.2",
+    "gulp": "^5.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.83.1",
+    "sharp": "^0.33.4"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%"
-  ]
+  "packageManager": "pnpm@10.23.0"
 }
