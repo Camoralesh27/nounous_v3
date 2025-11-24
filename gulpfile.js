@@ -22,11 +22,12 @@ const sassCompiler = gulpSass(sass);
 //  JS
 // ============================
 export function js() {
-  return src('src/js/app.js')
+  return src('src/js/**/*.js') // <-- ahora compila todos los JS
     .pipe(plumber())
     .pipe(terser()) // minifica JS
     .pipe(dest('build/js'));
 }
+
 
 // ============================
 //  LENGUAJES / JSON
